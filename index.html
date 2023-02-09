@@ -1,7 +1,12 @@
 <!DOCTYPE html>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link rel="icon" href="favicon.ico" type="image/x-icon"/>
+
+<title>
+  J Lim's Space
+</title>
 <html>
-<title>JLim's Space.</title>
 <header>
   <div class="header-content">
 
@@ -25,6 +30,19 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+.zoom {
+  transition: transform .2s;
+  width: 200px;
+  height: 200px;
+  margin: 0 auto;
+}
+
+.zoom:hover {
+  -ms-transform: scale(1.5); /* IE 9 */
+  -webkit-transform: scale(1.5); /* Safari 3-8 */
+  transform: scale(1.5); 
 }
 
 body {
@@ -167,7 +185,7 @@ body {
   background-attachment: fixed;
   background-size: cover;
 }
-img {
+.img {
   display: block;
   margin-left: auto;
   margin-right: auto;
@@ -175,6 +193,57 @@ img {
   height: auto;
   border-radius: 50%;
 }
+
+* {
+  box-sizing: border-box;
+}
+
+.row {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+}
+
+/* Create three equal columns that sits next to each other */
+.column {
+  float: center;
+  width: 15%;
+  padding: 1px;
+}
+
+@media screen and (max-width: 650px) {
+  .column {
+    width: 100%;
+    display: block;
+  }
+}
+
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.gitna {
+  align-items:center;
+  justify-content:center;
+  margin:auto;
+}
+
+.container {
+  padding: 0 16px;
+}
+
+.container::after, .row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
 
 </style>
 
@@ -184,9 +253,23 @@ img {
 <br>
 
 
-<img src="https://scontent.fmnl30-3.fna.fbcdn.net/v/t39.30808-6/329117452_858392588579363_6298720234844275965_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=09cbfe&_nc_eui2=AeEINWRFr0TK3S5hbWOIw_RguNQuVFrohVe41C5UWuiFV5jbpZoog8CN5HdQNYQV5wD1yzS0CkbH96Bgg7hr1ck3&_nc_ohc=R5me__oYXIQAX9HO5dZ&tn=ivQ9kaUG74f876Hf&_nc_ht=scontent.fmnl30-3.fna&oh=00_AfBynsRbTOSxbMF0OH-somdxTamUOg6YLdg9j1PTLMkGWw&oe=63E90776" alt="Ghelo.Dump" width="auto" height="200">
-
-
+<img class='zoom img' src="https://scontent.fmnl30-3.fna.fbcdn.net/v/t39.30808-6/329117452_858392588579363_6298720234844275965_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=09cbfe&_nc_eui2=AeEINWRFr0TK3S5hbWOIw_RguNQuVFrohVe41C5UWuiFV5jbpZoog8CN5HdQNYQV5wD1yzS0CkbH96Bgg7hr1ck3&_nc_ohc=R5me__oYXIQAX9HO5dZ&tn=ivQ9kaUG74f876Hf&_nc_ht=scontent.fmnl30-3.fna&oh=00_AfBynsRbTOSxbMF0OH-somdxTamUOg6YLdg9j1PTLMkGWw&oe=63E90776" alt="Ghelo.Dump" width="auto" height="200">
+<br>
+<br>
+<div class="row">
+  <a href="https://facebook.com/" target="_self">
+  <div class="column zoom">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/cd/Facebook_logo_%28square%29.png/800px-Facebook_logo_%28square%29.png" alt="Facebook" style="width:100%"> </a>
+  </div>
+  <div class="column zoom">
+    <a href="https://www.youtube.com/" target="_self">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/YouTube_full-color_icon_%282017%29.svg/1024px-YouTube_full-color_icon_%282017%29.svg.png" alt="Youtube" style="width:100%"> </a>
+  </div>
+  <div class="column zoom">
+    <a href="https://discord.com/channels/me" target="_self">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Instagram_logo_2016.svg/2048px-Instagram_logo_2016.svg.png" alt="Discord" style="width:100%"> </a>
+  </div>
+</div>
 
 
 <script>
